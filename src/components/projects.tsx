@@ -4,52 +4,67 @@ import { useNavigate } from "react-router-dom"
 
 export function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
   const navigate = useNavigate()
 
   const handleMoreClick = () => {
     navigate('/projects')
+  }
+
+  const handleProjectClick = (path: string | null) => {
+    if (path) {
+      navigate(path)
+    }
   }
   
   const projects = [
     {
       title: "FoodHub",
       image: "/FoodHub.png",
-      alt: "FoodHub Project"
+      alt: "FoodHub Project",
+      path: "/projects/foodhub"
     },
     {
       title: "Jenius Academy",
       image: "/Jenius Academy.png",
-      alt: "Jenius Academy Project"
+      alt: "Jenius Academy Project",
+      path: "/projects/jenius-academy"
     },
     {
       title: "BananaCat",
       image: "/BananaCat.png",
-      alt: "BananaCat Project"
+      alt: "BananaCat Project",
+      path: "/projects/BananaCat"
     },
     {
       title: "ChipiChapa",
       image: "/ChipiChapa.png",
-      alt: "ChipiChapa Project"
+      alt: "ChipiChapa Project",
+      path: "/projects/ChipiChapa"
     },
     {
       title: "KBMK Website",
       image: "/KBMK Web.png",
-      alt: "KBMK Website Project"
+      alt: "KBMK Website Project",
+      path: "/projects/kbmk-web"
     },
     {
       title: "KBMK",
       image: "/KBMK.jpg",
-      alt: "KBMK Project"
+      alt: "KBMK Project",
+      path: "/projects/kbmk"
     },
     {
       title: "World University",
       image: "/World University.png",
-      alt: "World University Project"
+      alt: "World University Project",
+      path: "/projects/world-university"
     },
     {
       title: "To Be Continue",
       image: "/to-be-continue.jpg",
-      alt: "More Projects Coming Soon"
+      alt: "More Projects Coming Soon",
+      path: null // No path for "To Be Continue"
     }
   ]
 
@@ -57,10 +72,10 @@ export function Projects() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % projects.length)
-    }, 4000) // Change slide every 4 seconds
+    }, isHovered ? 8000 : 4000) // Slower when hovered (8s), normal when not hovered (4s)
 
     return () => clearInterval(interval)
-  }, [projects.length])
+  }, [projects.length, isHovered])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % projects.length)
@@ -81,7 +96,11 @@ export function Projects() {
           <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
 
           {/* Project Slider */}
-          <div className="relative">
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             {/* Slider Container */}
             <div className="overflow-hidden rounded-lg bg-gray-100">
               <div 
@@ -90,7 +109,12 @@ export function Projects() {
               >
                 {projects.map((project, index) => (
                   <div key={index} className="w-full flex-shrink-0 p-8">
-                    <div className="aspect-video relative overflow-hidden rounded-lg bg-white">
+                    <div 
+                      className={`aspect-video relative overflow-hidden rounded-lg bg-white ${
+                        project.path ? 'cursor-pointer hover:shadow-lg transition-shadow' : ''
+                      }`}
+                      onClick={() => handleProjectClick(project.path)}
+                    >
                       <img 
                         src={project.image} 
                         alt={project.alt} 

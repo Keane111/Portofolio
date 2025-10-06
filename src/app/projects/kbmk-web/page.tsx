@@ -1,5 +1,6 @@
 import { Contact } from "@/components/contact"
 import { Button } from "@/components/ui/button"
+import { FadeIn } from "@/components/FadeIn"
 
 export default function KBMKPage() {
   const handleGithubClick = () => {
@@ -10,26 +11,30 @@ export default function KBMKPage() {
     <div className="min-h-screen bg-white">
       <main className="max-w-6xl mx-auto px-6 py-16 pt-24">
         {/* Project Header */}
-        <div className="mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Project</h1>
-          <div className="w-full h-px bg-gray-300 mb-12"></div>
+        <FadeIn delay={0.1}>
+          <div className="mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">Project</h1>
+            <div className="w-full h-px bg-gray-300 mb-12"></div>
 
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-4xl font-bold text-gray-900">KBMK</h2>
-            <span className="text-2xl font-medium text-gray-600">2025</span>
+            <div className="flex items-center justify-between mb-12">
+              <h2 className="text-4xl font-bold text-gray-900">KBMK</h2>
+              <span className="text-2xl font-medium text-gray-600">2025</span>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Project Image - KBMK Website */}
-        <div className="mb-16">
-          <div className="bg-white border border-gray-200 shadow-lg">
-            <img
-              src="/KBMK Web.png"
-              alt="KBMK Website Interface"
-              className="w-full h-auto"
-            />
+        <FadeIn delay={0.3}>
+          <div className="mb-16">
+            <div className="bg-white border border-gray-200 shadow-lg">
+              <img
+                src="/KBMK Web.png"
+                alt="KBMK Website Interface"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Project Description */}
         <div className="mb-16">

@@ -1,5 +1,6 @@
 import { Contact } from "@/components/contact"
 import { Button } from "@/components/ui/button"
+import { FadeIn } from "@/components/FadeIn"
 
 export default function FoodHubPage() {
   const handleWebClick = () => {
@@ -14,53 +15,63 @@ export default function FoodHubPage() {
     <div className="min-h-screen bg-white">
       <main className="max-w-6xl mx-auto px-6 py-16 pt-24">
         {/* Project Header */}
-        <div className="mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Project</h1>
-          <div className="w-full h-px bg-gray-300 mb-12"></div>
+        <FadeIn delay={0.1}>
+          <div className="mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">Project</h1>
+            <div className="w-full h-px bg-gray-300 mb-12"></div>
 
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-4xl font-bold text-gray-900">FoodHub</h2>
-            <span className="text-2xl font-medium text-gray-600">2025</span>
+            <div className="flex items-center justify-between mb-12">
+              <h2 className="text-4xl font-bold text-gray-900">FoodHub</h2>
+              <span className="text-2xl font-medium text-gray-600">2025</span>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Project Mockup - Updated to match the exact reference design */}
-        <div className="mb-16">
-          <div className="bg-white border border-gray-200 shadow-lg">
-            <img src="/FoodHub.png" alt="FoodHub Application Interface" className="w-full h-auto" />
+        <FadeIn delay={0.3}>
+          <div className="mb-16">
+            <div className="bg-white border border-gray-200 shadow-lg">
+              <img src="/FoodHub.png" alt="FoodHub Application Interface" className="w-full h-auto" />
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {/* Project Description */}
-        <div className="mb-16">
-          <p className="text-2xl text-gray-700 leading-relaxed mb-8 text-left">
-            FoodHub is a team project and is a food ordering web application in the BINUS University area, this app is
-            designed to make it easier for students to buy food without having to queue.
-          </p>
+        <FadeIn delay={0.5}>
+          <div className="mb-16">
+            <p className="text-2xl text-gray-700 leading-relaxed mb-8 text-left">
+              FoodHub is a team project and is a food ordering web application in the BINUS University area, this app is
+              designed to make it easier for students to buy food without having to queue.
+            </p>
 
-          <div className="flex gap-4">
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-8 py-3 text-lg border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors bg-transparent"
-              onClick={handleWebClick}
-            >
-              Web
-            </Button>
-            <Button 
-              size="lg" 
-              className="px-8 py-3 text-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors"
-              onClick={handleGithubClick}
-            >
-              Github
-            </Button>
+            <div className="flex gap-4">
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 text-lg border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors bg-transparent"
+                onClick={handleWebClick}
+              >
+                Web
+              </Button>
+              <Button 
+                size="lg" 
+                className="px-8 py-3 text-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors"
+                onClick={handleGithubClick}
+              >
+                Github
+              </Button>
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
-        <div className="w-full h-px bg-gray-300"></div>
+        <FadeIn delay={0.7}>
+          <div className="w-full h-px bg-gray-300"></div>
+        </FadeIn>
       </main>
 
-      <Contact />
+      <FadeIn delay={0.9}>
+        <Contact />
+      </FadeIn>
     </div>
   )
 }

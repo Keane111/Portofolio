@@ -82,7 +82,7 @@ export default function ContactPage() {
 
             <form className="space-y-8" onSubmit={onSubmit}>
               <div>
-                <label className="text-lg text-black mb-2 block text-left">Name* :</label>
+                <label className="text-lg text-black mb-2 block text-left">Name :</label>
                 <Input
                   type="text"
                   name="name"
@@ -92,7 +92,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="text-lg text-black mb-2 block text-left">Email* :</label>
+                <label className="text-lg text-black mb-2 block text-left">Email :</label>
                 <Input
                   type="email"
                   name="email"
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="text-lg text-black mb-2 block text-left">Message* :</label>
+                <label className="text-lg text-black mb-2 block text-left">Message :</label>
                 <Textarea 
                   name="message"
                   required

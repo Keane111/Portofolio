@@ -1,9 +1,20 @@
 import { Button } from "@/components/ui/button"
 import { useNavigate } from "react-router-dom"
 import { FadeIn } from "@/components/FadeIn"
+import { LogoLoop, type LogoItem } from "@/components/LogoLoop"
 
 export function Hero() {
   const navigate = useNavigate()
+
+  const techLogos: LogoItem[] = [
+    { src: "/html logo.png", alt: "HTML5", title: "HTML5" },
+    { src: "/css-3 logo.png", alt: "CSS3", title: "CSS3" },
+    { src: "/js logo.png", alt: "JavaScript", title: "JavaScript" },
+    { src: "/React logo.png", alt: "React", title: "React" },
+    { src: "/figma logo.png", alt: "Figma", title: "Figma" },
+    { src: "/github logo.png", alt: "GitHub", title: "GitHub" },
+    { src: "/laravel logo.png", alt: "Laravel", title: "Laravel" }
+  ]
 
   const handleContactClick = () => {
     navigate('/contact')
@@ -56,6 +67,24 @@ export function Hero() {
               >
                 Contact
               </Button>
+            </div>
+          </FadeIn>
+
+          {/* Tech Logos Infinite Loop */}
+          <FadeIn delay={700}>
+            <div className="pt-16">
+              <LogoLoop 
+                logos={techLogos}
+                speed={120}
+                direction="left"
+                logoHeight={60}
+                gap={60}
+                pauseOnHover={true}
+                scaleOnHover={true}
+                fadeOut={true}
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology stack"
+              />
             </div>
           </FadeIn>
         </div>
