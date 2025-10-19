@@ -90,27 +90,27 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" className="py-24 px-8 border-t border-gray-200">
+    <section id="projects" className="py-4 xs:py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 transition-all duration-300 ease-in-out">
       <div className="max-w-6xl mx-auto">
-        <div className="space-y-12">
-          <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
+        <div className="space-y-4 xs:space-y-6 sm:space-y-8 md:space-y-12 lg:space-y-16 transition-all duration-300 ease-in-out">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight transition-all duration-300 ease-in-out">Projects</h2>
 
           {/* Project Slider */}
           <div 
-            className="relative"
+            className="relative transition-all duration-300 ease-in-out"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             {/* Slider Container */}
-            <div className="overflow-hidden rounded-lg bg-gray-100">
+            <div className="overflow-hidden rounded-lg bg-gray-100 transition-all duration-300 ease-in-out">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {projects.map((project, index) => (
-                  <div key={index} className="w-full flex-shrink-0 p-8">
+                  <div key={index} className="w-full flex-shrink-0 p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-300 ease-in-out">
                     <div 
-                      className={`aspect-video relative overflow-hidden rounded-lg bg-white ${
+                      className={`aspect-video relative overflow-hidden rounded-lg bg-white transition-all duration-300 ease-in-out ${
                         project.path ? 'cursor-pointer hover:shadow-lg transition-shadow' : ''
                       }`}
                       onClick={() => handleProjectClick(project.path)}
@@ -121,8 +121,8 @@ export function Projects() {
                         className="w-full h-full object-contain" 
                       />
                     </div>
-                    <div className="mt-6 text-center">
-                      <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+                    <div className="mt-4 md:mt-6 text-center">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-900">{project.title}</h3>
                     </div>
                   </div>
                 ))}

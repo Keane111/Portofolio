@@ -36,8 +36,7 @@ export default function BananaCatPage() {
         <FadeIn delay={0.5}>
           <div className="mb-16">
             <p className="text-2xl text-gray-700 leading-relaxed mb-8 text-left">
-              BananaCat is a simple and clean interface design project showcasing modern UI/UX principles with a 
-              playful and user-friendly approach to design.
+              BananaCat is a Back-End test project to create a company software website for company employees that functions to display a list of new employees, add new employees, edit, delete employees, etc.
             </p>
 
             <div className="flex gap-4">

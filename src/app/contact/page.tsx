@@ -5,11 +5,13 @@ import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, FileText } from "lucide-react"
 import { useState } from "react"
 import { FadeIn } from "@/components/FadeIn"
+import EmailNotification from "@/components/EmailNotification"
 
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [showNotification, setShowNotification] = useState(false)
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -35,6 +37,7 @@ export default function ContactPage() {
       if (res.success) {
         console.log("Success", res);
         setSubmitStatus('success');
+        setShowNotification(true);
         // Reset form
         (event.target as HTMLFormElement).reset();
       } else {
@@ -186,6 +189,12 @@ export default function ContactPage() {
       </main>
 
       <Contact />
+      
+      {/* Email Notification */}
+      <EmailNotification 
+        showNotification={showNotification} 
+        onHide={() => setShowNotification(false)} 
+      />
     </div>
   )
 }

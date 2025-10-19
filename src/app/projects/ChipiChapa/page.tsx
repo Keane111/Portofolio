@@ -36,8 +36,7 @@ export default function ChipiChapaPage() {
         <FadeIn delay={0.5}>
           <div className="mb-16">
             <p className="text-2xl text-gray-700 leading-relaxed mb-8 text-left">
-              ChipiChapa is a bright and colorful application interface project featuring vibrant design elements 
-              and an engaging user experience with modern interactive components.
+              ChipiChapa is a Back-End test project to create a buying and selling website software that has 2 roles, namely user and admin, where users can buy and check out and admins can add items for sale.
             </p>
 
             <div className="flex gap-4">
