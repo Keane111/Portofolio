@@ -27,8 +27,8 @@ export function Contact() {
   }
 
   return (
-    <footer id="contact" className="bg-black text-white py-4 xs:py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 w-screen absolute left-0 right-0 mt-0 mb-0 transition-all duration-300 ease-in-out">
-      <div className="max-w-6xl mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12">
+    <footer id="contact" className="bg-black text-white pt-4 xs:pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-16 pb-4 xs:pb-6 sm:pb-8 md:pb-10 lg:pb-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mb-[20px] transition-all duration-300 ease-in-out flex items-center">
+      <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 xs:gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 transition-all duration-300 ease-in-out">
             {/* Contact Info */}
             <div className="space-y-3 xs:space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 transition-all duration-300 ease-in-out">
