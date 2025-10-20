@@ -27,7 +27,6 @@ export interface StaggeredMenuProps {
   changeMenuColorOnOpen?: boolean;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
-  onItemClick?: () => void;
 }
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
@@ -45,8 +44,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   accentColor = '#5227FF',
   isFixed = false,
   onMenuOpen,
-  onMenuClose,
-  onItemClick
+  onMenuClose
 }: StaggeredMenuProps) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
