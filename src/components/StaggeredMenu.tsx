@@ -534,16 +534,16 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope [data-position='left'] .sm-prelayers { right: auto; left: 0; }
 .sm-scope .sm-prelayer { position: absolute; top: 0; right: 0; height: 100%; width: 100%; transform: translateX(0); }
 .sm-scope .sm-panel-inner { flex: 1; display: flex; flex-direction: column; gap: 1.25rem; }
-.sm-scope .sm-socials { margin-top: auto; padding-top: 1rem; padding-bottom: 5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.sm-scope .sm-socials { margin-top: auto; padding-top: 1rem; padding-bottom: 5rem; display: flex; flex-direction: column; gap: 0.75rem; pointer-events: auto; }
 .sm-scope .sm-socials-title { margin: 0; font-size: 1rem; font-weight: 500; color: var(--sm-accent, #ff0000); }
-.sm-scope .sm-socials-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.sm-scope .sm-socials-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap; pointer-events: auto; }
 .sm-scope .sm-socials-list .sm-socials-link { opacity: 1; transition: opacity 0.3s ease; }
 .sm-scope .sm-socials-list:hover .sm-socials-link:not(:hover) { opacity: 0.35; }
 .sm-scope .sm-socials-list:focus-within .sm-socials-link:not(:focus-visible) { opacity: 0.35; }
 .sm-scope .sm-socials-list .sm-socials-link:hover,
 .sm-scope .sm-socials-list .sm-socials-link:focus-visible { opacity: 1; }
 .sm-scope .sm-socials-link:focus-visible { outline: 2px solid var(--sm-accent, #ff0000); outline-offset: 3px; }
-.sm-scope .sm-socials-link { font-size: 1.8rem; font-weight: 700; color: #111; text-decoration: none; position: relative; padding: 4px 8px; display: inline-block; transition: color 0.3s ease, opacity 0.3s ease; }
+.sm-scope .sm-socials-link { font-size: 1.8rem; font-weight: 700; color: #111; text-decoration: none; position: relative; padding: 4px 8px; display: inline-block; transition: color 0.3s ease, opacity 0.3s ease; pointer-events: auto; cursor: pointer; }
 .sm-scope .sm-socials-link:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-title { margin: 0; font-size: 1rem; font-weight: 600; color: #fff; text-transform: uppercase; }
 .sm-scope .sm-panel-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
