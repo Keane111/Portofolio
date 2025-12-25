@@ -14,7 +14,7 @@ export function Contact() {
   }
 
   const handleLinkedinClick = () => {
-    window.open('https://www.linkedin.com/in/keane-richard-christopher-a7693b32b/', '_blank')
+    window.open('https://www.linkedin.com/in/keane11/', '_blank')
   }
 
   const handleCVClick = () => {

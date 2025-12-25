@@ -37,7 +37,7 @@ export function About() {
                   </div>
                   <span className="text-xs sm:text-sm md:text-base text-gray-500 transition-all duration-300 ease-in-out text-right">2023 - Now</span>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base text-gray-600 ml-0 sm:ml-4 leading-relaxed transition-all duration-300 ease-in-out text-left">( Keluarga Besar Mahasiswa Khoirudin )</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600 ml-0 sm:ml-4 leading-relaxed transition-all duration-300 ease-in-out text-left">( Keluarga Besar Mahasiswa Khonghucu )</p>
               </div>
 
               <div className="space-y-1 transition-all duration-300 ease-in-out">
