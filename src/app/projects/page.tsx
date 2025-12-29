@@ -23,10 +23,10 @@ export default function ProjectsPage() {
       href: "/projects/foodhub", // Added link to FoodHub project page
     },
     {
-      name: "BananaCat",
-      image: "/BananaCat.png",
-      description: "Simple and clean interface design",
-      href: "/projects/BananaCat",
+      name: "Dana Karya",
+      image: "/Dana_Karya.png",
+      description: "Crowdfunding platform for local businesses",
+      href: "/projects/Dana-Karya",
     },
     {
       name: "KBMK Website",

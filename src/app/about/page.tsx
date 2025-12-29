@@ -164,7 +164,7 @@ export default function AboutPage() {
                 <p className="text-xl text-gray-700 text-left">Undergraduate Computer Science Student</p>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-6 mt-12">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-3xl font-semibold text-gray-900 text-left">SMA Santo Yoseph Pangkalpinang</h3>
                   <span className="text-sm text-gray-600">2020 - 2023</span>

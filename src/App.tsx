@@ -16,6 +16,7 @@ import KBMKPage from "@/app/projects/kbmk/page"
 import KBMKWebPage from "@/app/projects/kbmk-web/page"
 import WorldUniversityPage from "@/app/projects/world-university/page"
 import BananaCatPage from "@/app/projects/BananaCat/page"
+import DanaKaryaPage from "@/app/projects/Dana-Karya/page"
 import ChipiChapaPage from "@/app/projects/ChipiChapa/page"
 import './App.css'
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/projects/kbmk-web" element={<KBMKWebPage />} />
           <Route path="/projects/world-university" element={<WorldUniversityPage />} />
           <Route path="/projects/BananaCat" element={<BananaCatPage />} />
+          <Route path="/projects/Dana-Karya" element={<DanaKaryaPage />} />
           <Route path="/projects/ChipiChapa" element={<ChipiChapaPage />} />
         </Routes>
       </div>

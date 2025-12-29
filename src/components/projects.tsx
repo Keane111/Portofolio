@@ -31,10 +31,10 @@ export function Projects() {
       path: "/projects/jenius-academy"
     },
     {
-      title: "BananaCat",
-      image: "/BananaCat.png",
-      alt: "BananaCat Project",
-      path: "/projects/BananaCat"
+      title: "Dana Karya",
+      image: "/Dana_Karya.png",
+      alt: "Dana Karya Project",
+      path: "/projects/Dana-Karya"
     },
     {
       title: "ChipiChapa",
