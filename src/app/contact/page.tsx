@@ -59,13 +59,22 @@ export default function ContactPage() {
     window.open('https://github.com/Keane111', '_blank')
   }
 
-  const handleCVClick = () => {
-    const link = document.createElement('a')
-    link.href = '/Keane Richard Christopher CV.pdf'
-    link.download = 'Keane Richard Christopher CV.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const handleCVClick = async () => {
+    try {
+      const response = await fetch(`/Keane%20Richard%20Christopher%20CV.pdf?v=${Date.now()}`)
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = 'Keane Richard Christopher CV.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(url)
+    } catch (error) {
+      console.error('Error downloading CV:', error)
+      window.open('/Keane%20Richard%20Christopher%20CV.pdf', '_blank')
+    }
   }
 
   return (

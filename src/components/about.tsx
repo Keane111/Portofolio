@@ -13,13 +13,13 @@ export function About() {
       <div className="max-w-6xl mx-auto">
         {/* First Row: About me (left) + Organization (right) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24 mb-8 xs:mb-10 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-300 ease-in-out">
-          
+
           {/* About Me Section */}
           <div className="space-y-4 xs:space-y-6 sm:space-y-8 md:space-y-10 transition-all duration-300 ease-in-out">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left leading-tight transition-all duration-300 ease-in-out">About me</h2>
             <div className="space-y-2 xs:space-y-3 sm:space-y-4 md:space-y-5 text-gray-700 leading-relaxed text-left transition-all duration-300 ease-in-out">
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed transition-all duration-300 ease-in-out">Currently a Computer Science student at BINUS University, 5th semester, 3rd year.
-                Software Engineer, I'm  also interested in learning new things, I am also interested in the fields of design and video editing.
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed transition-all duration-300 ease-in-out">Currently a Computer Science student at BINUS University, 6th semester, 3rd year.
+                Software Engineer, I'm currently doing internship at Cognoscenti Consulting Group as a Full Stack Developer | Web Developer.
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function About() {
 
           {/* Hard Skills (left) + Soft Skills (right) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24 transition-all duration-300 ease-in-out">
-            
+
             {/* Hard Skills Section */}
             <div className="space-y-3 xs:space-y-4 sm:space-y-6 md:space-y-8 transition-all duration-300 ease-in-out">
               <div className="border-2 border-gray-900 p-3 xs:p-4 sm:p-6 md:p-8 transition-all duration-300 ease-in-out">
@@ -107,7 +107,7 @@ export function About() {
 
         {/* More Button */}
         <div className="text-center mt-6 xs:mt-8 sm:mt-10 md:mt-12 lg:mt-16 transition-all duration-300 ease-in-out">
-          <Button 
+          <Button
             className="bg-gray-900 text-white hover:bg-gray-800 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 w-full sm:w-auto text-sm sm:text-base md:text-lg transition-all duration-300 ease-in-out"
             onClick={handleMoreClick}
           >
